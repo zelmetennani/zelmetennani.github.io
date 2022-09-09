@@ -85,59 +85,38 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
   <!-- Contact Section -->
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Useful commands/ Notes</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-terminal fa-fw w3-text-white w3-xxlarge w3-margin-right"></i></p>
-      <!--<p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p> -->
-      <p><div class="row">
-<div class="col-lg-8 text-center text-lg-left">
-<p><span style="font-weight: 400;">Update Kali:</span></p>
-<p><span style="font-weight: 400;">apt update &amp;&amp; apt full-upgrade</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><span style="font-weight: 400;">Monitor mode:</span></p>
-<p><span style="font-weight: 400;">Ifconfig wlan0 down</span></p>
-<p><span style="font-weight: 400;">Iwconfig wlan0 mode monitor</span></p>
-<p><span style="font-weight: 400;">Ifconfig wlan0 up</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><span style="font-weight: 400;">Airodump packet capture(specific ap):</span></p>
-<p><span style="font-weight: 400;">Airodump-ng (--bssid [mac address] --channel [#]) wlan0</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><span style="font-weight: 400;">Deauth attack:&nbsp;</span></p>
-<p><span style="font-weight: 400;">aireplay-ng --deauth [# of deauth packets] -a [access point mac address] -c [client mac address] wlan0</span></p>
-<p><span style="font-weight: 400;">aireplay-ng --deauth 10000 -c FC:C2:DE:25:3C:F6 -a 38:70:0C:F3:68:C8 wlan0</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><span style="font-weight: 400;">Create a honeypot:</span></p>
-<p><span style="font-weight: 400;">bash /usr/share/mana-toolkit/run-mana/start-nat-simple.sh</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><strong>MITMF:</strong></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><strong>NetDiscover</strong></p>
-<p><span style="font-weight: 400;">Apt-get update</span></p>
-<p><span style="font-weight: 400;">Netdiscover -r [IP range(10.0.2.0/24)]</span></p>
-<p><span style="font-weight: 400;">patience(~60sec)</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><strong>Arp spoof:</strong></p>
-<p><span style="font-weight: 400;">Tell the target I am the router:</span></p>
-<p><span style="font-weight: 400;">Arpspoof -i wlan0 -t [target IP] [AP IP]</span></p>
-<p><span style="font-weight: 400;">Tell router I am the target:</span></p>
-<p><span style="font-weight: 400;">Arpspoof -i wlan0 -t [AP IP] [target IP]</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3"><br /><br /></h2>
-<p><span style="font-weight: 400;">Enable IP forwarding:</span></p>
-<p><span style="font-weight: 400;">Echo 1&gt;/proc/sys/net/ipv4/ip_forward</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3"><br /><br /><br /></h2>
-<p><span style="font-weight: 400;">Tools:</span></p>
-<p><span style="font-weight: 400;">Wifite -i wlan0</span></p>
-<p><span style="font-weight: 400;">Bettercap - disrupts router too much</span></p>
-<p><span style="font-weight: 400;">Metasploit</span></p>
-<p><span style="font-weight: 400;">Burp Suite</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3"><br /><br /></h2>
-<p><span style="font-weight: 400;">MITM:</span></p>
-<p><span style="font-weight: 400;">mitmf</span></p>
-<p><span style="font-weight: 400;">BeEF - Browser exploitation</span></p>
-<p><span style="font-weight: 400;">Evilgrade - Update server spoof with backdoor</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3"><br /><br /><br /></h2>
+    <p><span style="font-weight: 400;">Wifi security is important. From a security perspective it can often be a weak point. Here are some cool penetration testing tools to prod at your local wireless network security.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;"></span></p>
+<p><br /><br /></p>
+<p><span style="font-weight: 400;">#1 Using a raspberry pi and external network card</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Raspi&rsquo;s are awesome. We are going to use one, in combination with a wifi card that supports monitor mode and packet injection, to test how much info we can gather once we have network access. The Raspi programming is essentially installing a linux distro on an sd card. In this case a RaspberryPi may even be a bit of overkill, in terms of resources. It would be cool to get these tools on an even smaller form factor like some kind of arduino with a on-board packet injection supported wifi chip -- project for another day.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Today we are using these:</span></p>
+<p>&nbsp;</p>
+<p><img src="raspi.jpg" alt="Raspi" /> <img src="Wifi-Card.jpg" alt="Wifi-Card" /></p>
+<p><span style="font-weight: 400;">Step one is downloading Kali Linux and burning it to an sd card. Here is one good tutorial on how do that &lt;link&gt;. Once installed, shove that card in your RasPi and boot it up.&nbsp; Get into that desktop, connect to wifi, and you are good to go.&nbsp;&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><img src="images/kali.png" alt="Kali" style="height:300px;"></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Once you bask in the glory of your new Kali Linux box you&rsquo;ll want to connect your external wifi card and get it into monitor mode.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Note: You will need an external wifi card that supports packet injection and monitor mode.</span></p>
+<p><a href="https://store.rokland.com/products/alfa-awus036nha-802-11n-wireless-n-usb-wi-fi-adapter-2-watt?variant=32375704813651&amp;currency=USD&amp;utm_medium=product_sync&amp;utm_source=google&amp;utm_content=sag_organic&amp;utm_campaign=sag_organic&amp;gclid=Cj0KCQjwyOuYBhCGARIsAIdGQRMr_3olJ1ozRsoNcVoYMtphQC-uhq8-f-uz_Ei9NmdMeLqH0EPgY8caApoVEALw_wcB"><span style="font-weight: 400;">This</span></a><span style="font-weight: 400;"> is my favorite one.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Find your wifi card name in iwconfig</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">And set it to monitor mode with these commands:</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Ifconfig wlan1 down</span></p>
+<p><span style="font-weight: 400;">Iwconfig wlan1 mode monitor&nbsp;</span></p>
+<p><span style="font-weight: 400;">Ifconfig wlan1 up</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Turn those commands into a shell script for convenience:</span></p>
+<p>&nbsp;</p>
+<img src="images/monmode_bash_script.png" alt="monmode script" style="height:140px;">
+<p>&nbsp;</p>
 </div>
 </div>
 <div class="brands-grid separator-border separator-border-light mt-5">&nbsp;</div></p>
