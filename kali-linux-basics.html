@@ -93,51 +93,50 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <!--<p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p> -->
       <p><div class="row">
 <div class="col-lg-8 text-center text-lg-left">
-<p><span style="font-weight: 400;">Update Kali:</span></p>
-<p><span style="font-weight: 400;">apt update &amp;&amp; apt full-upgrade</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><span style="font-weight: 400;">Monitor mode:</span></p>
-<p><span style="font-weight: 400;">Ifconfig wlan0 down</span></p>
-<p><span style="font-weight: 400;">Iwconfig wlan0 mode monitor</span></p>
-<p><span style="font-weight: 400;">Ifconfig wlan0 up</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><span style="font-weight: 400;">Airodump packet capture(specific ap):</span></p>
-<p><span style="font-weight: 400;">Airodump-ng (--bssid [mac address] --channel [#]) wlan0</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><span style="font-weight: 400;">Deauth attack:&nbsp;</span></p>
-<p><span style="font-weight: 400;">aireplay-ng --deauth [# of deauth packets] -a [access point mac address] -c [client mac address] wlan0</span></p>
-<p><span style="font-weight: 400;">aireplay-ng --deauth 10000 -c FC:C2:DE:25:3C:F6 -a 38:70:0C:F3:68:C8 wlan0</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><span style="font-weight: 400;">Create a honeypot:</span></p>
-<p><span style="font-weight: 400;">bash /usr/share/mana-toolkit/run-mana/start-nat-simple.sh</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><strong>MITMF:</strong></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><strong>NetDiscover</strong></p>
-<p><span style="font-weight: 400;">Apt-get update</span></p>
-<p><span style="font-weight: 400;">Netdiscover -r [IP range(10.0.2.0/24)]</span></p>
-<p><span style="font-weight: 400;">patience(~60sec)</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3">&nbsp;</h2>
-<p><strong>Arp spoof:</strong></p>
-<p><span style="font-weight: 400;">Tell the target I am the router:</span></p>
-<p><span style="font-weight: 400;">Arpspoof -i wlan0 -t [target IP] [AP IP]</span></p>
-<p><span style="font-weight: 400;">Tell router I am the target:</span></p>
-<p><span style="font-weight: 400;">Arpspoof -i wlan0 -t [AP IP] [target IP]</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3"><br /><br /></h2>
-<p><span style="font-weight: 400;">Enable IP forwarding:</span></p>
-<p><span style="font-weight: 400;">Echo 1&gt;/proc/sys/net/ipv4/ip_forward</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3"><br /><br /><br /></h2>
-<p><span style="font-weight: 400;">Tools:</span></p>
-<p><span style="font-weight: 400;">Wifite -i wlan0</span></p>
-<p><span style="font-weight: 400;">Bettercap - disrupts router too much</span></p>
-<p><span style="font-weight: 400;">Metasploit</span></p>
-<p><span style="font-weight: 400;">Burp Suite</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3"><br /><br /></h2>
-<p><span style="font-weight: 400;">MITM:</span></p>
-<p><span style="font-weight: 400;">mitmf</span></p>
-<p><span style="font-weight: 400;">BeEF - Browser exploitation</span></p>
-<p><span style="font-weight: 400;">Evilgrade - Update server spoof with backdoor</span></p>
-<h2 class="text-7 text-white font-weight-600 mb-3"><br /><br /><br /></h2>
+  <p>&nbsp;</p><p><strong>Update Kali:</strong></p>
+  <p><span style="font-weight: 400;">apt update &amp;&amp; apt full-upgrade</span></p>
+  <p>&nbsp;</p>
+  <p><span style="font-weight: 400;">Monitor mode:</span></p>
+  <p><span style="font-weight: 400;">Ifconfig wlan0 down</span></p>
+  <p><span style="font-weight: 400;">Iwconfig wlan0 mode monitor</span></p>
+  <p><span style="font-weight: 400;">Ifconfig wlan0 up</span></p>
+  <p>&nbsp;</p>
+  <p><strong>Create a honeypot:</strong></p>
+  <p><span style="font-weight: 400;">bash /usr/share/mana-toolkit/run-mana/start-nat-simple.sh</span></p>
+  <p><br /><br /></p>
+  <p><strong>Post-connection tools:</strong></p>
+  <p>&nbsp;</p>
+  <p><strong>NetDiscover - Discover devices on your network</strong></p>
+  <p><span style="font-weight: 400;">Apt-get update</span></p>
+  <p><span style="font-weight: 400;">Netdiscover -r [IP range(10.0.2.0/24)]</span></p>
+  <p><span style="font-weight: 400;">patience(~60sec)</span></p>
+  <p>&nbsp;</p>
+  <p><strong>Arp spoof:</strong></p>
+  <p><span style="font-weight: 400;">Tell the target I am the router:</span></p>
+  <p><span style="font-weight: 400;">Arpspoof -i wlan0 -t [target IP] [AP IP]</span></p>
+  <p><span style="font-weight: 400;">Tell router I am the target:</span></p>
+  <p><span style="font-weight: 400;">Arpspoof -i wlan0 -t [AP IP] [target IP]</span></p>
+  <p>&nbsp;</p>
+  <p><strong>Aireplay-ng</strong></p>
+  <p><span style="font-weight: 400;">Airodump packet capture(specific ap):</span></p>
+  <p><span style="font-weight: 400;">Airodump-ng (--bssid [mac address] --channel [#]) wlan0</span></p>
+  <p>&nbsp;</p>
+  <p><span style="font-weight: 400;">Deauth attack:&nbsp;</span></p>
+  <p><span style="font-weight: 400;">aireplay-ng --deauth [# of deauth packets] -a [access point mac address] -c [client mac address] wlan0</span></p>
+  <p><span style="font-weight: 400;">aireplay-ng --deauth 10000 -c FC:C2:DE:25:3C:F6 -a 38:70:0C:F3:68:C8 wlan0</span></p>
+  <p>&nbsp;</p>
+  <p><strong>Bettercap:</strong></p>
+  <p><span style="font-weight: 400;">Arp spoofing</span></p>
+  <p><span style="font-weight: 400;">Deauth attacks</span></p>
+  <p><span style="font-weight: 400;">Other modules</span><br /><br /></p>
+  <p><strong>Other Tools:</strong></p>
+  <p><span style="font-weight: 400;">Wifite -i wlan0</span></p>
+  <p><span style="font-weight: 400;">Metasploit</span></p>
+  <p><span style="font-weight: 400;">Burp Suite</span></p>
+  <p><br /><strong>MITM:</strong></p>
+  <p><span style="font-weight: 400;">mitmf</span></p>
+  <p><span style="font-weight: 400;">BeEF - Browser exploitation</span></p>
+  <p><span style="font-weight: 400;">Evilgrade - Update server spoof with backdoor</span></p>
 </div>
 </div>
 <div class="brands-grid separator-border separator-border-light mt-5">&nbsp;</div></p>
