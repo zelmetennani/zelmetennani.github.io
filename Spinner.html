@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Spinning Purple Donut</title>
+  <title>Spinning Purple Triple Torus</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-    }
-    canvas {
-      display: block;
-    }
-  </style>
 </head>
 <body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -27,19 +18,39 @@
     // Create a renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0x77708E); // Light grey background color
     document.body.appendChild(renderer.domElement);
 
-    // Create a donut geometry
-    const donutGeometry = new THREE.TorusGeometry(1, 0.5, 16, 100);
-    const donutMaterial = new THREE.MeshBasicMaterial({ color: 0x9932CC });
-    const donut = new THREE.Mesh(donutGeometry, donutMaterial);
-    scene.add(donut);
+    // Create a torus geometry
+    const torusGeometry = new THREE.TorusGeometry(1, 0.2, 32, 40); // Updated torus parameters
+    const torusMaterial = new THREE.MeshBasicMaterial({ color: 0x645021
+ }); // Color
 
+    // Create three torus meshes and arrange them in a row
+    const torus1 = new THREE.Mesh(torusGeometry, torusMaterial);
+    const torus2 = new THREE.Mesh(torusGeometry, torusMaterial);
+    const torus3 = new THREE.Mesh(torusGeometry, torusMaterial);
+
+    torus1.position.set(0.5, 0, 0);
+    torus2.position.set(0, 1.5, 0);
+    torus3.position.set(-0.7, 0, 0);
+
+    scene.add(torus1);
+    scene.add(torus2);
+    scene.add(torus3);
+
+    // Generate a random rotation speed between 0.005 and 0.03 for one of the tori
+    const randomSpeed = (Math.random() * 0.025) + 0.005;
+    
     // Animation loop
     function animate() {
       requestAnimationFrame(animate);
-      donut.rotation.x += 0.01;
-      donut.rotation.y += 0.01;
+      torus1.rotation.x += randomSpeed;
+      torus1.rotation.y += randomSpeed;
+      torus2.rotation.x += randomSpeed * 1.31;
+      torus2.rotation.y += 0.01;
+      torus3.rotation.x += 0.01;
+      torus3.rotation.y += 0.01;
       renderer.render(scene, camera);
     }
 
