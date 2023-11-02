@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+body, h1, h2, h3, h4, h5, h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
 .w3-sidebar {width: 120px;background: #222;}
@@ -27,13 +27,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
+  <!-- Avatar image in the top left corner -->
   <img src="images/greenboard.jpg" style="width:100%">
   <a href="https://zackelmet.xyz/" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <h4>ZE</h4>
   </a>
-  </nav>
+</nav>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
@@ -43,146 +43,176 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <a href="resume.html" class="w3-bar-item w3-button" style="width:25% !important">RESUME</a>
     <a href="index.html#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
   </div>
-  </div>
 </div>
 
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
-    <!-- Header/Home -->
-    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-      <h3><span class="w3-hide-small"></span> Posts & Write Ups</h3>
-      
-      <img src="images/B&WBoard.jpg" alt="image" class="w3-image" width="450" height="1108">
-    </header>
-  </div>
-  
-  <!-- Portfolio Section 
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">My Photos</h2>
-    <hr style="width:200px" class="w3-opacity"> -->
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h3><span class="w3-hide-small"></span> Posts & Write Ups</h3>
 
-    <!-- Grid for photos
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/rocks.jpg" style="width:100%">
-        <img src="/w3images/sailboat.jpg" style="width:100%">
-      </div>
+    <img src="images/B&WBoard.jpg" alt="image" class="w3-image" width="450" height="1108">
+  </header>
+</div>
 
-      <div class="w3-half">
-        <img src="/w3images/underwater.jpg" style="width:100%">
-        <img src="/w3images/chef.jpg" style="width:100%">
-        <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/p6.jpg" style="width:100%">
-      </div>
-    </div> -->
-  <!-- End Portfolio Section -->
-  </div>
+<style>
+  .w3-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .w3-padding-64 {
+    max-width: 600px; /* Set a maximum width to limit content size */
+    text-align: center; /* Center the text inside the container */
+    margin: 0 auto; /* Center the container itself on the page */
+    padding: 64px; /* Add some padding to the container */
+  }
 
-  <style>
-    .w3-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .w3-padding-64 {
-      max-width: 600px; /* Set a maximum width to limit content size */
-      text-align: center; /* Center the text inside the container */
-      margin: 0 auto; /* Center the container itself on the page */
-      padding: 64px; /* Add some padding to the container */
-    }
-  
-    .w3-text-light-grey {
-      color: #f1f1f1;
-    }
-  
-    .w3-opacity {
-      opacity: 0.5;
-    }
-  
-    .w3-section {
-      margin-top: 16px;
-    }
-  </style>
+  .w3-text-light-grey {
+    color: #f1f1f1;
+  }
 
-<div class="w3-content w3-text-grey" id="">
+  .w3-opacity {
+    opacity: 0.5;
+  }
+
+  .w3-section {
+    margin-top: 16px;
+  }
+</style>
+
+<!-- Posts Section -->
+<div class="w3-content w3-text-grey">
+  <!-- Post 1 -->
   <div class="w3-padding-64">
-    <h2 class="w3-text-light-grey"><a href="posts/MouseMazeGame/MouseMazeGame.html">Mouse Maze Game</a></h2>
+    <h2 class="w3-text-light-grey">
+      <a href="posts/MouseMazeGame/MouseMazeGame.html">Mouse Maze Game</a>
+    </h2>
+    <p class="w3-text-light-grey">Published on <span class="post-date">October 15, 2023</span></p>
     <hr style="width:100%" class="w3-opacity">
+    <img src="images/mouse_maze_game.jpg" alt="Mouse Maze Game" class="post-image" width="300" height="200">
     <div class="w3-section">
-      <p><i class="fa fa- fa-fw w3-text-white w3-xxlarge w3-margin-right"></i><a>Still Under Construction</a></p>
+      <p>
+        <i class="fa fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+        <a>Still Under Construction</a>
+      </p>
     </div>
-  </div>  
+  </div>
 
-<div class="w3-content w3-text-grey" id="">
+  <!-- Post 2 -->
   <div class="w3-padding-64">
-    <h2 class="w3-text-light-grey"><a href="posts/Entropy-TerminalStates-BTC.html">Entropy, Terminal States, BTC</a></h2>
+    <h2 class="w3-text-light-grey">
+      <a href="posts/Entropy-TerminalStates-BTC.html">Entropy, Terminal States, BTC</a>
+    </h2>
+    <p class="w3-text-light-grey">Published on <span class="post-date">October 10, 2023</span></p>
     <hr style="width:100%" class="w3-opacity">
+    <img src="images/entropy_terminal_states_btc.jpg" alt="Entropy, Terminal States, BTC" class="post-image" width="300" height="200">
     <div class="w3-section">
-      <p><i class="fa fa-fast-forward fa-fw w3-text-white w3-xxlarge w3-margin-right"></i><a>We Must Accelarate the Heat Death</a></p>
+      <p>
+        <i class="fa fa-fast-forward fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+        <a>We Must Accelerate the Heat Death</a>
+      </p>
     </div>
   </div>
 
-  <div class="w3-content w3-text-grey" id="">
-    <div class="w3-padding-64">
-      <h2 class="w3-text-light-grey"><a href="posts/Spinner.html">Spinner</a></h2>
-      <hr style="width:100%" class="w3-opacity">
-      <div class="w3-section">
-        <p><i class="fa fa-cogs fa-fw w3-text-white w3-xxlarge w3-margin-right"></i><a>ThreeJS Spinning Torus</a></p>
-      </div>
-    </div>
+  <!-- Post 3 -->
+<div class="w3-padding-64">
+  <h2 class="w3-text-light-grey">
+    <a href="posts/Spinner.html">Spinner</a>
+  </h2>
+  <p class="w3-text-light-grey">Published on <span class="post-date">October 5, 2023</span></p>
+  <hr style="width:100%" class="w3-opacity">
+  <img src="images/spinner.jpg" alt="Spinner" class="post-image" width="300" height="200">
+  <div class="w3-section">
+    <p>
+      <i class="fa fa-cogs fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+      <a>ThreeJS Spinning Torus</a>
+    </p>
+  </div>
+</div>
 
-  <div class="w3-content w3-text-grey" id="">
-    <div class="w3-padding-64">
-      <h2 class="w3-text-light-grey"><a href="posts/List-100.html">List 100</a></h2>
-      <hr style="width:100%" class="w3-opacity">
-      <div class="w3-section">
-        <p><i class="fa fa-spinner fa-fw w3-text-white w3-xxlarge w3-margin-right"></i><a>To Do Before Death</a></p>
-      </div>
-    </div>
-  
-    <div class="w3-padding-64">
-      <h2 class="w3-text-light-grey"><a href="posts/kali-linux-basics.html">Kali Linux</a></h2>
-      <hr style="width:100%" class="w3-opacity">
-      <div class="w3-section">
-        <p><i class="fa fa-code fa-fw w3-text-white w3-xxlarge w3-margin-right"></i><a>Useful Linux security tools and commands</a></p>
-      </div>
-    </div>
-  
-    <div class="w3-padding-64">
-      <h2 class="w3-text-light-grey"><a href="posts/Wifi-Security.html">Wifi Security</a></h2>
-      <hr style="width:100%" class="w3-opacity">
-      <div class="w3-section">
-        <p><i class="fa fa-wifi fa-fw w3-text-white w3-xxlarge w3-margin-right"></i><a>Using a RaspberryPi to sniff network traffic</a></p>
-      </div>
-    </div>
-  
-    <div class="w3-padding-64">
-      <h2 class="w3-text-light-grey"><a href="https://phenomenal-halva-672d27.netlify.app/">JS Art</a></h2>
-      <hr style="width:100%" class="w3-opacity">
-      <div class="w3-section">
-        <p><i class="fa fa-cubes fa-fw w3-text-white w3-xxlarge w3-margin-right"></i><a>Browser designs</a></p>
-      </div>
-    </div>
+<!-- Post 4 -->
+<div class="w3-padding-64">
+  <h2 class="w3-text-light-grey">
+    <a href="posts/List-100.html">List 100</a>
+  </h2>
+  <p class="w3-text-light-grey">Published on <span class="post-date">October 1, 2023</span></p>
+  <hr style="width:100%" class="w3-opacity">
+  <img src="images/list_100.jpg" alt="List 100" class="post-image" width="300" height="200">
+  <div class="w3-section">
+    <p>
+      <i class="fa fa-spinner fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+      <a>To Do Before Death</a>
+    </p>
   </div>
-  
-  <!-- End Posts Section -->
+</div>
+
+<!-- Post 5 -->
+<div class="w3-padding-64">
+  <h2 class="w3-text-light-grey">
+    <a href="posts/kali-linux-basics.html">Kali Linux</a>
+  </h2>
+  <p class="w3-text-light-grey">Published on <span class="post-date">September 28, 2023</span></p>
+  <hr style="width:100%" class="w3-opacity">
+  <img src="images/kali_linux.jpg" alt="Kali Linux" class="post-image" width="300" height="200">
+  <div class="w3-section">
+    <p>
+      <i class="fa fa-code fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+      <a>Useful Linux security tools and commands</a>
+    </p>
   </div>
-  
-    
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
+</div>
+
+<!-- Post 6 -->
+<div class="w3-padding-64">
+  <h2 class="w3-text-light-grey">
+    <a href="posts/Wifi-Security.html">Wifi Security</a>
+  </h2>
+  <p class="w3-text-light-grey">Published on <span class="post-date">September 25, 2023</span></p>
+  <hr style="width:100%" class="w3-opacity">
+  <img src="images/wifi_security.jpg" alt="Wifi Security" class="post-image" width="300" height="200">
+  <div class="w3-section">
+    <p>
+      <i class="fa fa-wifi fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+      <a>Using a RaspberryPi to sniff network traffic</a>
+    </p>
+  </div>
+</div>
+
+<!-- Post 7 -->
+<div class="w3-padding-64">
+  <h2 class="w3-text-light-grey">
+    <a href="https://phenomenal-halva-672d27.netlify.app/">JS Art</a>
+  </h2>
+  <p class="w3-text-light-grey">Published on <span class="post-date">September 20, 2023</span></p>
+  <hr style="width:100%" class="w3-opacity">
+  <img src="images/js_art.jpg" alt="JS Art" class="post-image" width="300" height="200">
+  <div class="w3-section">
+    <p>
+      <i class="fa fa-cubes fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+      <a>Browser designs</a>
+    </p>
+  </div>
+</div>
+
+
+  <!-- Add more posts following the same structure -->
+
+</div>
+<!-- End Posts Section -->
+
+<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+  <!-- <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered
   </footer>
 
-<!-- END PAGE CONTENT -->
+  <-- END PAGE CONTENT -->
 </div>
 
 </body>
